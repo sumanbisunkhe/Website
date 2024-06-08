@@ -1,0 +1,305 @@
+body {
+  background-color: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+ 
+  margin: 0; /* Reset body margin */
+}
+
+.tabs {
+  background-color: rgb(0, 119, 255);
+  display: flex;
+  border: 1px rgb(0, 119, 255);
+  align-items: center; /* Center the items vertically */
+  padding: 20px; /* Add padding around the container */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.tabs .icon {
+  font-family: cursive;
+  margin-right: auto; /* Pushes the other tabs to the right */
+  font-weight: bolder; /* Makes the "SB" bold */
+  font-size: 2em; /* Increases the size of the "SB" */
+}
+
+.tabs a {
+  margin: 0 10px; /* Add space around each tab */
+  text-decoration: none;
+  color: white; /* Default color for all tabs */
+  padding: 10px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.tabs a:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 208, 19);
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tabs {
+    justify-content: center; /* Center tabs on smaller screens */
+  }
+
+  .tabs .icon {
+    font-size: 1.5em; /* Adjust size for smaller screens */
+    margin-bottom: 10px; /* Add space below the icon */
+  }
+
+  .tabs a {
+    margin: 5px; /* Reduce margin for smaller screens */
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (max-width: 624px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .tabs {
+    justify-content: center; /* Center tabs on smaller screens */
+  }
+
+  .tabs a {
+    font-size: small;
+    text-align: center; /* Center text */
+  }
+  .tabs .icon {
+    font-size: 1em; /* Adjust size for smaller screens */
+    margin-bottom: 10px; /* Add space below the icon */
+  }
+}
+@media (max-width: 480px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .tabs {
+    flex-direction: column; /* Stack tabs vertically */
+    align-items: stretch; /* Stretch tabs to fill container width */
+  }
+
+  .tabs a {
+    margin: 5px 0; /* Add vertical margin */
+    width: 100%; /* Make tabs full width */
+    text-align: center; /* Center text */
+  }
+}
+
+/* for image */
+.image-container {
+  margin: 0% auto; /* Center the container horizontally */
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 0%;
+  padding: 20px;
+}
+
+/* Add styles to the profile image */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  transition: transform 0.3s, filter 0.3s;
+  border-radius: 50%;
+}
+
+/* Scale up the image and container slightly on hover */
+.image-container:hover {
+  transform: scale(1.5);
+}
+
+.image-container:hover .profile-img {
+  transform: scale(1.1);
+  filter: brightness(1.1); /* Slightly increase brightness on hover */
+}
+
+/* Ensure the profile image is centered within the container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text box styling */
+.text-box {
+  flex-grow: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.text-box p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.intro {
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 46px;
+}
+
+.text-box {
+  background-color: rgb(251, 205, 0);
+  border: 5px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgb(0, 153, 255);
+}
+.linkedin {
+  position: absolute;
+  top: 225px;
+  left: 225px;
+}
+
+.github {
+  float: right;
+  position: absolute;
+  top: 240px;
+  right: 225px;
+}
+@media (max-width: 1177px) {
+  .linkedin {
+    top: 225px;
+    left: 120px;
+  }
+
+  .linkedin img {
+    width: 80px;
+  }
+
+  .github {
+    top: 228px;
+    right: 120px;
+  }
+
+  .github img {
+    width: 74px;
+  }
+}
+@media (max-width: 844px) {
+  .linkedin {
+    top: 225px;
+    left: 60px;
+  }
+
+  .linkedin img {
+    width: 50px;
+  }
+
+  .github {
+    top: 228px;
+    right: 60px;
+  }
+
+  .github img {
+    width: 50px;
+  }
+}
+
+.box-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 50px;
+    padding: 50px;
+    text-decoration: none;
+
+}
+
+.box {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    width: 300px;
+    height: 50px;
+    background-color: yellow;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    box-shadow: 2px white;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Adjust box shadow here */
+
+}
+.box0{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    width: 300px;
+    height: 50px;
+    background-color: yellow;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    box-shadow: 2px white;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Adjust box shadow here */
+
+
+}
+
+.box0 a{
+    text-decoration: none;
+}
+
+.box a{
+    text-decoration: none;
+}
+
+.box1 {
+    margin: 40px;
+}
+
+.box:hover {
+   /* border:1px solid black;*/
+    width: 315px;
+    height: 60px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Adjust box shadow here */
+    font-size: larger;
+    
+
+}
+.box0:hover {
+    /* border:1px solid black;*/
+     width: 315px;
+     height: 60px;
+     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Adjust box shadow here */
+     font-size: larger;
+     
+ 
+ }
+.box2{
+    margin-bottom: 107px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.boxP{
+    font-family: serif;    
+    font-style: italic;
+}
+
+.boxP:hover{
+    color: blue;
+}
+
