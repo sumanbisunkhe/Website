@@ -55,8 +55,7 @@ body {
 
 @media (max-width: 624px) {
   body {
-    padding-left: 20px;
-    padding-right: 20px;
+   
   }
 
   .tabs {
@@ -74,8 +73,7 @@ body {
 }
 @media (max-width: 480px) {
   body {
-    padding-left: 20px;
-    padding-right: 20px;
+   
   }
 
   .tabs {
